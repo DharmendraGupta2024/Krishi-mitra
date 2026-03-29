@@ -1,0 +1,90 @@
+h3{color: #2e7e03 ;}                /* for all h3*/
+h4{color: maroon;}                           /* for all h4*/
+
+h1{}
+
+a{  color: darkblue}
+a:hover{color: red;
+      text-decoration: none;}
+
+.entire{
+  padding: 0px;
+  border:  0px solid black;
+  margin-left:  100px;
+  margin-right: 100px;
+}
+
+
+.boxx{
+  border: none;
+  border-radius: 16px;
+  padding: 30px;
+  background-color: var(--card-bg, #ffffff);
+  box-shadow: var(--soft-shadow, 0 5px 15px rgba(0,0,0,0.05));
+  margin-bottom: 30px;
+}
+
+.video{
+  padding-left: 350px;
+}
+
+
+body {
+  height: 2000px;
+  position: relative;
+}
+
+.intro-copy {
+  padding: 1em;
+  margin: 50vh auto;
+  max-width: 11em;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 2em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: .25em;
+  width: 80px;
+  height: 80px;
+  background-color: #F8F8F8;
+
+.top-link.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.top-link.hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+.top-link:focus {
+    display: block;
+    top: 5px;
+    left: 5px;
+    z-index: 100000;
+    clip-path: none;
+    background-color: #eee;
+    padding: 15px 23px 14px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    line-height: normal;
+    color: #444;
+    font-size: 1em;
+
+  }

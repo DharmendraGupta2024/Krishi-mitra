@@ -1,0 +1,663 @@
+/* premium UI upgrade stylesheet for Krishi Mitra - VIBRANT LIGHT THEME */
+
+/* Global Variables */
+:root {
+	--primary-green: #2ecc71;
+	--primary-dark: #27ae60;
+	--primary-gradient: linear-gradient(135deg, #2ecc71 0%, #0cafd2 100%);
+	--bg-main: #fcfcfc;
+	--bg-section: #f4f7f6;
+	--card-bg: #ffffff;
+	--text-dark: #2c3e50;
+	--text-muted: #7f8c8d;
+	--glass-bg: rgba(255, 255, 255, 0.95);
+	--glass-border: rgba(0, 0, 0, 0.05);
+	--accent-shadow: 0 10px 30px rgba(46, 204, 113, 0.15);
+	--soft-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body {
+	font-family: 'Outfit', sans-serif !important;
+	background-color: var(--bg-main) !important;
+	color: var(--text-dark) !important;
+	margin: 0;
+}
+
+/* -------------------------------------
+   Header & Glassmorphism Navigation 
+   ------------------------------------- */
+.header {
+	background: var(--glass-bg) !important;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid var(--glass-border);
+	padding: 10px 40px !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+}
+
+.header a {
+	color: var(--text-dark) !important;
+	font-family: 'Outfit', sans-serif !important;
+	font-weight: 600 !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px !important;
+	transition: all 0.3s ease;
+	margin: 0 8px;
+	border-radius: 6px !important;
+	padding: 10px 15px !important;
+	position: relative;
+	text-decoration: none !important;
+}
+
+.header a:hover, .header a.active, .subnav:hover .subnavbtn {
+	color: var(--primary-green) !important;
+}
+
+.header a:hover {
+	background: transparent !important;
+	text-shadow: none;
+}
+
+.header a.active {
+	background: rgba(46, 204, 113, 0.1) !important;
+	color: var(--primary-dark) !important;
+}
+
+.header a.logo {
+	padding: 0 !important;
+	border-radius: 0 !important;
+}
+.header a.logo::after {
+	display: none; /* remove animated line for logo */
+}
+
+/* Make logo visible on pure white backgrounds. 
+If the logo is white, adding filter inverse or brightness helps. */
+.header a.logo img {
+	height: 60px !important;
+	transition: transform 0.3s ease;
+	filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.8));
+}
+.header a.logo:hover {
+	background: transparent !important;
+	transform: scale(1.05);
+}
+
+/* Subnav Dropdowns */
+.subnav {
+	position: relative;
+}
+.subnavbtn {
+	color: var(--text-dark) !important;
+	font-family: 'Outfit', sans-serif !important;
+	font-weight: 600 !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px !important;
+    transition: all 0.3s ease;
+    padding: 10px 15px !important;
+    border-radius: 6px !important;
+	cursor: pointer;
+	background: transparent !important;
+    border: none !important;
+    outline: none !important;
+	position: relative;
+}
+.subnav:hover .subnavbtn {
+	color: var(--primary-dark) !important;
+}
+
+.subnav-content {
+	background: #ffffff !important;
+	border: 1px solid var(--glass-border);
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    min-width: 220px;
+    margin-top: 5px;
+	position: absolute;
+    z-index: 1001;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transform: translateY(10px);
+}
+
+.subnav:hover .subnav-content {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.subnav-content li {
+    list-style: none;
+}
+
+.subnav-content a {
+	display: block;
+	width: 100%;
+	padding: 12px 15px !important;
+	text-align: left;
+	border-radius: 6px !important;
+    margin: 2px 0 !important;
+	font-size: 13px !important;
+}
+.subnav-content a::after {
+	display: none; /* No line animation in dropdown */
+}
+.subnav-content a:hover {
+	background: rgba(46, 204, 113, 0.1) !important;
+	color: var(--primary-dark) !important;
+}
+
+/* -------------------------------------
+   Hero Section Overrides 
+   ------------------------------------- */
+
+.thm-banner-wrapper {
+	margin-top: 80px !important;
+}
+
+/* Dark elegant gradient overlay for images to ensure readability */
+.rev_slider ul li::after {
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+	z-index: 1;
+}
+
+.tp-caption {
+	z-index: 5;
+}
+
+.caption-h1 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 85px !important;
+    font-weight: 800 !important;
+	color: #ffffff !important;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+	line-height: 1.1 !important;
+	letter-spacing: -1px;
+}
+.caption-p {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    color: #f1f2f6 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;
+	letter-spacing: 0.5px;
+}
+
+/* -------------------------------------
+   Section Titles & Typography 
+   ------------------------------------- */
+.sec-padding {
+	background-color: transparent !important; /* Ensure native color shines through */
+}
+
+.sec-title h2 span {
+	background: var(--primary-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	font-weight: 800;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 42px !important;
+	letter-spacing: -1px;
+	text-transform: none !important;
+}
+.sec-title h2:after {
+    background: var(--primary-gradient) !important;
+    width: 60px !important;
+	height: 4px !important;
+	border-radius: 2px;
+	margin-top: 15px !important;
+}
+
+.sec-title p {
+    font-size: 18px;
+    color: var(--text-muted) !important;
+	margin-top: 15px !important;
+	line-height: 1.6;
+}
+
+
+/* -------------------------------------
+   Cards - Features & Welcome Services 
+   ------------------------------------- */
+.welcome-services {
+	background-color: var(--bg-section) !important;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.welcome-single-services {
+	background: var(--card-bg) !important;
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	box-shadow: var(--soft-shadow) !important;
+    height: 100%;
+    margin-bottom: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+.welcome-single-services:hover {
+	transform: translateY(-8px);
+	box-shadow: var(--accent-shadow) !important;
+}
+
+/* Fix for broken slanted cards from original style.css */
+.welcome-single-services .text-box::before,
+.welcome-single-services .text-box::after,
+.welcome-single-services:hover .text-box::before,
+.welcome-single-services:hover .text-box::after {
+    display: none !important;
+    content: none !important;
+}
+
+.welcome-single-services .img-box {
+    overflow: hidden;
+}
+
+.welcome-single-services .img-box img {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+	transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.welcome-single-services:hover .img-box img {
+	transform: scale(1.08); /* slight zoom */
+}
+
+.welcome-single-services .text-box {
+	padding: 30px !important;
+    background: transparent !important;
+    position: relative;
+    z-index: 10;
+}
+
+.welcome-single-services .text-box h3 {
+	font-family: 'Outfit', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	color: var(--text-dark) !important;
+	margin-bottom: 15px;
+	transition: color 0.3s ease;
+}
+
+.welcome-single-services:hover .text-box h3 {
+	color: var(--primary-dark) !important;
+}
+
+.welcome-single-services .text-box p {
+	color: var(--text-muted) !important;
+	font-size: 16px;
+	line-height: 1.7;
+	margin: 0;
+	font-weight: 400;
+}
+
+
+/* -------------------------------------
+   About Box overrides 
+   ------------------------------------- */
+.about-info-box {
+    background: #ffffff !important;
+	border-top: 1px solid var(--glass-border);
+	border-bottom: 1px solid var(--glass-border);
+}
+.bulleted-list li {
+    font-size: 18px;
+	font-weight: 400; /* better readability than 300 */
+    margin-bottom: 20px;
+    color: var(--text-dark) !important;
+    display: flex;
+    align-items: flex-start;
+	line-height: 1.6;
+}
+.bulleted-list li i {
+    color: var(--primary-green) !important;
+    font-size: 24px;
+    margin-right: 18px;
+    margin-top: 3px;
+}
+.about-info-box .sec-title h2 span {
+	font-size: 36px !important;
+}
+
+
+/* -------------------------------------
+   Footer modernizations 
+   ------------------------------------- */
+#footer {
+	background: var(--bg-main) !important;
+	border-top: 1px solid #ebedf0;
+	padding: 80px 0 40px !important;
+}
+#footer .title h2 span {
+	font-family: 'Outfit', sans-serif !important;
+	font-size: 28px !important;
+	font-weight: 600 !important;
+	line-height: 1.4;
+	background: var(--primary-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+#footer .about-widget img {
+	filter: drop-shadow(0 2px 5px rgba(0,0,0,0.6));
+}
+
+.bottom-bar {
+    background: #f1f2f6 !important;
+    color: var(--text-muted);
+	padding: 25px 0 !important;
+	font-size: 15px;
+	border-top: 1px solid #e1e8ed;
+}
+.bottom-bar p {
+	margin: 0 !important;
+}
+.bottom-bar a {
+    color: var(--primary-dark) !important;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+.bottom-bar a:hover {
+	color: var(--primary-green) !important;
+}
+
+/* -------------------------------------
+   Modern UI Utility Tokens (Layout grids, Banners, Cards, Tables)
+   ------------------------------------- */
+
+/* Layout Grids */
+.modern-grid {
+    display: grid;
+    gap: 30px;
+    padding: 20px 0;
+}
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* Subpage Heroes and Banners */
+.modern-hero {
+    position: relative;
+    padding: 220px 20px 140px;
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.9), rgba(12, 175, 210, 0.9)), url('../images/slider/12.jpeg') center/cover no-repeat fixed;
+    text-align: center;
+    color: white;
+    margin-top: 80px; 
+}
+.modern-hero h1 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.modern-hero p {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.subpage-hero {
+    padding: 150px 20px 80px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, #0abde3 100%);
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+.subpage-hero h1 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0;
+}
+
+/* Base Modern Sections */
+.modern-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.modern-section-title {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 50px;
+}
+.modern-section-title span {
+    color: var(--primary-green);
+}
+
+/* Modern Card */
+.modern-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+.modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--accent-shadow);
+}
+.modern-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.modern-card-body {
+    padding: 30px;
+    flex-grow: 1;
+}
+.modern-card h3 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+.modern-card p {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Premium Buttons */
+.btn-modern {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--primary-gradient);
+    color: white !important;
+    font-family: 'Outfit', sans-serif !important;
+    text-decoration: none !important;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.3);
+    border: none;
+    cursor: pointer;
+}
+.btn-modern:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+}
+.btn-outline:hover {
+    background: white;
+    color: var(--primary-dark) !important;
+}
+
+/* Split Showcase Feature */
+.split-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.split-showcase.reverse {
+    direction: rtl;
+}
+.split-showcase.reverse > * {
+    direction: ltr;
+}
+.split-showcase-text h3 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+.split-showcase-text p {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+.split-showcase-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--accent-shadow);
+}
+.split-showcase-img img {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .split-showcase, .split-showcase.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 30px;
+    }
+}
+
+/* Premium Tables */
+.premium-table-container {
+    overflow-x: auto;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--soft-shadow);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif !important;
+}
+.premium-table th {
+    background: var(--bg-section);
+    color: var(--text-dark);
+    font-weight: 700;
+    padding: 18px 20px;
+    border-bottom: 2px solid var(--primary-green);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.premium-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+.premium-table tr:last-child td {
+    border-bottom: none;
+}
+.premium-table tbody tr:hover {
+    background: #fafafa;
+}
+
+/* Global scroll smoothing */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Back to Top Floating Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    color: white !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.6);
+}

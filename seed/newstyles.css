@@ -1,0 +1,27 @@
+
+  table.tableizer-table {
+    font-size: 12px;
+  
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-section, #f4f7f6);
+     border: none;
+
+  } 
+  .tableizer-table td {
+    padding: 10px;
+
+    color: var(--text-dark, #2c3e50);
+     border-bottom: 1px solid var(--glass-border, #eee);
+   
+    background-color: var(--card-bg, #ffffff);
+  }
+  .tableizer-table th {
+    background-color: var(--primary-green, #2ecc71); 
+    color: #ffffff;
+    font-weight: bold;
+     border: none;
+  }
+  .entire{
+  background-color: transparent;
+  border: none;
+}
